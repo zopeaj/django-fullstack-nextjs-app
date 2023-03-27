@@ -1,0 +1,26 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer::Main</title>
+</head>
+<body>
+
+  {% if qs %}
+    <div>
+      {% for objdata in qs %}
+        <div>
+          <p>{{ objdata.username }}</p>
+          <p>{{ objdata.email }}</p>
+          <p>{{ objdata.lastname }}</p>
+          <p><a href="{% url 'customer:detail' objdata.id %}">{{ objdata.id }}</a></p>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+</body>
+</html>

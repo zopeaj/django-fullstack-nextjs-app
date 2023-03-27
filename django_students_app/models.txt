@@ -1,0 +1,7 @@
+Students
+  id
+  firstName
+  lastName
+  email
+  age
+

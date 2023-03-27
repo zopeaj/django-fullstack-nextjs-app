@@ -1,0 +1,25 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student::Details</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+</head>
+<body>
+
+  <div>
+    {% if obj %}
+      <h2>{{obj.name}}</h2>
+      <div>
+        <p>{{ obj.firstname }}</p>
+        <p>{{ obj.lastaneme }}</p>
+        <a href="{ url 'customer:home' }">Home</a>
+      </div>
+    {% endif %}
+  </div>
+
+</body>
+</html>
